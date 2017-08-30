@@ -1,0 +1,342 @@
+<script type="text/javascript">
+    RED.nodes.registerType('svrStatus', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: "Appium"
+            },
+            host: {
+                value: "localhost"
+            },
+            port: {
+                value: "4723"
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "svrStatus";
+        }
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="svrStatus">
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-tasks"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tasks"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="svrStatus">
+    <p>A simple node that converts the message payloads into all svrStatus characters</p>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('svrConfig', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: "Appium Config"
+            },
+            host: {
+                value: "localhost"
+            },
+            port: {
+                value: "4723"
+            },
+            platformName: {
+                value: "android"
+            },
+            OSversion: {
+                value: "7.1.1"
+            },
+            DeviceName: {
+                value: "HT4CDJT00451"
+            },
+            FolderLocation: {
+                value: "C://Users//stephen//Documents//Automation//"
+            },
+            AppName: {
+                value: "CommonTime Infinity-v3.1.0-b281.apk"
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "svrConfig";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="svrConfig">
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-laptop"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-ship"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-platformName"><i class="fa fa-tablet"></i> platformName</label>
+        <input type="text" id="node-input-platformName" placeholder="platformName">
+    </div>
+    <div class="form-row">
+        <label for="node-input-OSversion"><i class="fa fa-tablet"></i> OSversion</label>
+        <input type="text" id="node-input-OSversion" placeholder="OSversion">
+    </div>
+    <div class="form-row">
+        <label for="node-input-DeviceName"><i class="fa fa-tasks"></i> DeviceName</label>
+        <input type="text" id="node-input-DeviceName" placeholder="DeviceName">
+    </div>
+    <div class="form-row">
+        <label for="node-input-FolderLocation"><i class="fa fa-folder-o"></i> FolderLocation</label>
+        <input type="text" id="node-input-FolderLocation" placeholder="FolderLocation">
+    </div>
+    <div class="form-row">
+        <label for="node-input-AppName"><i class="fa fa-gears"></i> AppName</label>
+        <input type="text" id="node-input-AppName" placeholder="AppName">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="svrConfig">
+    <p>Configuration settings for the automation server</p>
+</script>
+
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('setContext', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            searchvalue: {
+                value: "WEBVIEW"
+            },
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "setContext";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="setContext">
+    <div class="form-row">
+        <label for="node-input-searchvalue"><i class="fa fa-at"></i> search value</label>
+        <select id="node-input-searchvalue" style="width:170px">
+			<option value="WEBVIEW">WEBVIEW</option>
+            <option value="NATIVE_APP">NATIVE_APP</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="setContext">
+    <p>This puts your Appium session into a mode where all commands are interpreted as being intended for automating the web view, rather than the native portion of the app.</p>
+</script>
+
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('selectElement', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            searchvalue: {
+                value: "css selector"
+            },
+            item: {
+                value: "#view > div > footer > div > a.btn.btn-primary"
+            },
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "selectElement";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="selectElement">
+    <div class="form-row">
+        <label for="node-input-searchvalue"><i class="fa fa-at"></i> search value</label>
+        <select id="node-input-searchvalue" style="width:170px">
+            <option value="class name">class name</option>
+            <option value="css selector">css selector</option>
+            <option value="id">id</option>
+            <option value="name">name</option>
+            <option value="link text">link text</option>
+            <option value="partial link text">partial link text</option>
+            <option value="tag name">tag name</option>
+            <option value="xpath">xpath</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-item"><i class="fa fa-chain"></i> Item</label>
+        <input type="text" id="node-input-item" placeholder="Item">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="selectElement">
+    <p>A simple node that converts the message payloads into all selectElement characters</p>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('handleAlert', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "handleAlert";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="handleAlert">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="handleAlert">
+    <p>Click the previously selected element</p>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('clickElement', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "clickElement";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="clickElement">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="clickElement">
+    <p>Click the previously selected element</p>
+</script>
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('listImport', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "listImport";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="listImport">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="listImport">
+    <p>converts a csv list of selection elements into an object for use with the selector node, Add an input node, feed it into a csv node that uses a comma separator, tick first row contains column names and output to a single message array</p>
+</script>
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('getContext', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "getContext";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="getContext">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="getContext">
+    <p>converts a csv list of selection elements into an object for use with the selector node, Add an input node, feed it into a csv node that uses a comma separator, tick first row contains column names and output to a single message array</p>
+</script>

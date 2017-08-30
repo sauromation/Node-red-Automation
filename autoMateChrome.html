@@ -1,0 +1,156 @@
+<script type="text/javascript">
+    RED.nodes.registerType('chromeDriverStatusx', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: "chromeDriver"
+            },
+            host: {
+                value: "localhost"
+            },
+            port: {
+                value: "9515"
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "chromeDriverStatusx";
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="chromeDriverStatusx">
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-tasks"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tasks"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="chromeDriverStatusx">
+    <p>A simple node that converts the message payloads into all svrStatus characters</p>
+</script>
+
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('chromeConfig', {
+        category: 'autoMatex',
+        color: '#a6bbff',
+        defaults: {
+            name: {
+                value: "Chrome Config"
+            },
+            host: {
+                value: "localhost"
+            },
+            port: {
+                value: "9515"
+            },
+            platformName: {
+                value: "electron"
+            },
+            OSversion: {
+                value: "7.1.1"
+            },
+            DeviceName: {
+                value: "HT4CDJT00451"
+            },
+            FolderLocation: {
+                value: "C://Users//stephen//Documents//Automation//"
+            },
+            AppName: {
+                value: "CommonTime Infinity-v3.1.0-b281.apk"
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "chromeConfig";
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="chromeConfig">
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-tasks"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tasks"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="chromeConfig">
+    <p>A simple node that converts the message payloads into all svrStatus characters</p>
+</script>
+
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('selectChromeElement', {
+        category: 'autoMate',
+        color: '#a6bbcf',
+        defaults: {
+            searchvalue: {
+                value: "css selector"
+            },
+            item: {
+                value: "#view > div > footer > div > a.btn.btn-primary"
+            },
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "selectChromeElement";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="selectChromeElement">
+    <div class="form-row">
+        <label for="node-input-searchvalue"><i class="fa fa-at"></i> search value</label>
+        <select id="node-input-searchvalue" style="width:170px">
+            <option value="class name">class name</option>
+            <option value="css selector">css selector</option>
+            <option value="id">id</option>
+            <option value="name">name</option>
+            <option value="link text">link text</option>
+            <option value="partial link text">partial link text</option>
+            <option value="tag name">tag name</option>
+            <option value="xpath">xpath</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-item"><i class="fa fa-chain"></i> Item</label>
+        <input type="text" id="node-input-item" placeholder="Item">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="selectChromeElement">
+    <p>A simple node that converts the message payloads into all selectChromeElement characters</p>
+</script>
